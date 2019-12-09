@@ -9,7 +9,7 @@
  universal="password">
     <ModelTags>
         <ModelTagVocabulary
-         description=""
+         description="Testing pull from git"
          documentationContent=""
          homeMashup=""
          isDynamic="false"
