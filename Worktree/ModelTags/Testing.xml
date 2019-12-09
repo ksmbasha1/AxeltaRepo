@@ -7,15 +7,14 @@
  revision="0"
  schemaVersion="1040"
  universal="password">
-    <Projects>
-        <Project
-         dependsOn=""
+    <ModelTags>
+        <ModelTagVocabulary
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T14:02:28.299+05:30"
-         name="Worktree"
-         packageVersion="1.0.0"
+         isDynamic="false"
+         lastModifiedDate="2019-12-09T14:12:51.202+05:30"
+         name="Testing"
          projectName="Worktree"
          tags="">
             <avatar></avatar>
@@ -32,6 +31,6 @@
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
-        </Project>
-    </Projects>
+        </ModelTagVocabulary>
+    </ModelTags>
 </Entities>

@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-12-08T10:38:35.922+05:30"
+         lastModifiedDate="2019-12-09T14:02:28.399+05:30"
          name="VM-TR2"
          projectName="Worktree"
          published="false"
@@ -127,31 +127,31 @@
                     <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </FieldServiceTech>
-                <VMHumiditySetpoint>
-                    <Value>70.93</Value>
-                    <Timestamp>2019-11-21T17:37:14.298+05:30</Timestamp>
-                    <Quality>GOOD</Quality>
-                </VMHumiditySetpoint>
-                <VMTempMin>
-                    <Value>5.0</Value>
-                    <Timestamp>2019-11-21T15:37:15.082+05:30</Timestamp>
-                    <Quality>GOOD</Quality>
-                </VMTempMin>
-                <VMTempMax>
-                    <Value>115.0</Value>
-                    <Timestamp>2019-11-21T15:36:45.078+05:30</Timestamp>
-                    <Quality>GOOD</Quality>
-                </VMTempMax>
-                <VMTemperatureSetpoint>
-                    <Value>35.78</Value>
-                    <Timestamp>2019-11-21T17:37:14.298+05:30</Timestamp>
-                    <Quality>GOOD</Quality>
-                </VMTemperatureSetpoint>
                 <Location>
                     <Value>40.0,-86.0,0.0</Value>
                     <Timestamp>2019-11-21T15:12:41.255+05:30</Timestamp>
                     <Quality>GOOD</Quality>
                 </Location>
+                <VMHumiditySetpoint>
+                    <Value>70.93</Value>
+                    <Timestamp>2019-11-21T17:37:14.298+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </VMHumiditySetpoint>
+                <VMTemperatureSetpoint>
+                    <Value>35.78</Value>
+                    <Timestamp>2019-11-21T17:37:14.298+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </VMTemperatureSetpoint>
+                <VMTempMax>
+                    <Value>115.0</Value>
+                    <Timestamp>2019-11-21T15:36:45.078+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </VMTempMax>
+                <VMTempMin>
+                    <Value>5.0</Value>
+                    <Timestamp>2019-11-21T15:37:15.082+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </VMTempMin>
                 <rap>
                     <Value></Value>
                     <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>

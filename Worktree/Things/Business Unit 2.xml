@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-12-08T10:38:35.950+05:30"
+         lastModifiedDate="2019-12-09T14:02:28.385+05:30"
          name="Business Unit 2"
          projectName="Worktree"
          published="false"
@@ -56,31 +56,31 @@
                     <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </FieldServiceTech>
-                <VMHumiditySetpoint>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </VMHumiditySetpoint>
-                <VMTempMin>
-                    <Value>-20.0</Value>
-                    <Timestamp>2019-12-07T17:57:19.097+05:30</Timestamp>
-                    <Quality>GOOD</Quality>
-                </VMTempMin>
-                <VMTempMax>
-                    <Value>135.0</Value>
-                    <Timestamp>2019-12-07T17:57:19.097+05:30</Timestamp>
-                    <Quality>GOOD</Quality>
-                </VMTempMax>
-                <VMTemperatureSetpoint>
-                    <Value>0.0</Value>
-                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
-                    <Quality>UNKNOWN</Quality>
-                </VMTemperatureSetpoint>
                 <Location>
                     <Value>0.0,0.0,0.0</Value>
                     <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
                     <Quality>UNKNOWN</Quality>
                 </Location>
+                <VMHumiditySetpoint>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </VMHumiditySetpoint>
+                <VMTemperatureSetpoint>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </VMTemperatureSetpoint>
+                <VMTempMax>
+                    <Value>135.0</Value>
+                    <Timestamp>2019-12-07T17:57:19.097+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </VMTempMax>
+                <VMTempMin>
+                    <Value>-20.0</Value>
+                    <Timestamp>2019-12-07T17:57:19.097+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </VMTempMin>
                 <rap>
                     <Value></Value>
                     <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
