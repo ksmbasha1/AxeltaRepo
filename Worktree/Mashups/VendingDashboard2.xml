@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2013"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="false"
+         aspect.mashupType="page"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-12-08T22:27:41.126+05:30"
+         name="VendingDashboard2"
+         projectName="Worktree"
+         rows="0.0"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="dev1"
+                     type="User"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="dev1"
+                     type="User"></Principal>
+                </Update>
+                <Delete>
+                    <Principal
+                     isPermitted="true"
+                     name="dev1"
+                     type="User"></Principal>
+                </Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Manufacturing Plants"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description="ThingName"
+                 name="Entity"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="1"
+                 baseType="NUMBER"
+                 description="ZoomLevel"
+                 name="Zoom"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "951320869966310",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "701320869966326",
+                    "Name" : "GetDashboardData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDashboardData"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "741320869966360",
+                    "Name" : "GetVendingNetwork",
+                    "Parameters" : {
+                      "filter" : "blank"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "0be4cc21-0bf8-4a19-8724-aec58db542ec",
+                    "Name" : "GetDashboardData1",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDashboardData1"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "ab9e7899-7e9c-42db-a6a0-a7252ba69b9e",
+                    "Name" : "GetVendingNetwork1",
+                    "Parameters" : {
+                      "filter" : "AcmeVendingCorp1"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork1"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "5c60c41b-6b12-4d6f-a248-84291e0c3fb1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Zoom",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Zoom",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "GoogleMap-6",
+                "TargetSection" : ""
+              }, {
+                "Id" : "86464d42-086d-4fce-b69e-db6899da5909",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CurrentTemperature",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardData1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-7",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9f8390c5-772e-46cd-8ae3-f2f5c10a45a7",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CurrentHumidity",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardData1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "Gauge-21",
+                "TargetSection" : ""
+              }, {
+                "Id" : "b011ecc8-02f7-40f8-b96b-6f35255fbec6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardData1",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "69cc1ece-4015-4155-b834-ee7e05de5caf",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetVendingNetwork1",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "0f51ebdb-2066-4710-929e-2e4249c4698a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CurrentTemperature",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardData1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "leddisplay-62",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c918d9d4-6661-40f8-ad86-f77457167f54",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "CurrentHumidity",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardData1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "leddisplay-61",
+                "TargetSection" : ""
+              }, {
+                "Id" : "d3da0ef1-af03-4ace-bfec-d94e1c3c95ed",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVendingNetwork1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "GoogleMap-6",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetDashboardData1",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "1f080d57-c063-4637-90ac-8984852ed9a5"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork1",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "c4d9ccd9-5b38-47fc-b993-1712b140bc72"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "EnableParameterEditing" : false,
+                  "Height" : 558,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "VendingShapeStyle",
+                  "StyleTheme" : "Base Theme",
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  }, {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "AcmeVending"
+                  } ],
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 817,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "THINGNAME",
+                    "Description" : "ThingName",
+                    "ParameterName" : "Entity"
+                  }, {
+                    "BaseType" : "NUMBER",
+                    "Description" : "ZoomLevel",
+                    "ParameterName" : "Zoom"
+                  } ],
+                  "id_index" : 62
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoZoomBehavior" : "every-data-change",
+                    "EnableLocationSelection" : false,
+                    "EnableMarkerSelection" : false,
+                    "EnableRegionSelection" : false,
+                    "EndMarkerStyle" : "DefaultMapEndStyle",
+                    "Height" : 350,
+                    "Id" : "GoogleMap-6",
+                    "Left" : 0,
+                    "LocationField" : "location",
+                    "MapType" : "roadmap",
+                    "MarkerField" : "",
+                    "MarkerFormatting_StateParameters" : [ ],
+                    "MarkerStyle" : "DefaultMapMarkerStyle",
+                    "MashupParameters" : [ ],
+                    "MultiSelect" : false,
+                    "PathStyle" : "DefaultMapPathStyle",
+                    "PlannedRouteLocationField" : "location",
+                    "PlannedRouteStyle" : "DefaultMapRouteStyle",
+                    "RegionFillOpacity" : "1.0",
+                    "RegionFormatting_StateParameters" : [ ],
+                    "RegionLocationField" : "",
+                    "RegionLocationsField" : "locations",
+                    "RegionMultiSelect" : false,
+                    "RegionStyle" : "DefaultMapRegionStyle",
+                    "RegionTooltipField" : "name",
+                    "ResponsiveLayout" : false,
+                    "RouteLocationField" : "location",
+                    "RouteStyle" : "DefaultMapRouteStyle",
+                    "SelectedMarkerStyle" : "DefaultMapSelectedStyle",
+                    "SelectedRegionStyle" : "DefaultMapRegionSelectedStyle",
+                    "SelectionMarkerStyle" : "DefaultMapSelectionStyle",
+                    "ShowDataLoading" : true,
+                    "ShowEndMarker" : false,
+                    "ShowMarkerTooltips" : true,
+                    "ShowMarkers" : true,
+                    "ShowPathBetweenMarkers" : false,
+                    "ShowPlannedRoute" : false,
+                    "ShowRegionTooltips" : false,
+                    "ShowRegions" : false,
+                    "ShowRoute" : false,
+                    "ShowSelectionMarker" : false,
+                    "ShowStartMarker" : false,
+                    "ShowTraffic" : false,
+                    "StartMarkerStyle" : "DefaultMapStartStyle",
+                    "TooltipField1" : "description",
+                    "TooltipMashupHeight" : 300,
+                    "TooltipMashupName" : "",
+                    "TooltipMashupWidth" : 400,
+                    "Top" : 0,
+                    "Type" : "googlemap",
+                    "Visible" : true,
+                    "Width" : 648,
+                    "Z-index" : 10,
+                    "Zoom" : 8,
+                    "__TypeDisplayName" : "Google Map"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Aperture" : 270,
+                    "Area" : "UI",
+                    "CenterDiameter" : 16,
+                    "CenterStyle" : "DefaultGaugeCenterStyle",
+                    "ChartStyle" : "DefaultChartStyle",
+                    "Decimals" : 0,
+                    "FaceDiameter" : 80,
+                    "FormatNeedle" : true,
+                    "GaugeBorder" : 8,
+                    "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                    "GaugeFaceStyle" : "VendingGaugeFaceStyle",
+                    "GaugeOffset" : 0,
+                    "GaugeScaling" : 70,
+                    "GaugeStyle" : "VendingGaugeStyle",
+                    "Height" : 138,
+                    "Id" : "Gauge-7",
+                    "Intervals" : 5,
+                    "IntervalsPerLabel" : 1,
+                    "LabelDecimals" : 0,
+                    "LabelDigits" : 3,
+                    "LabelDisplayMode" : "inside",
+                    "LabelStyle" : "DefaultGaugeLabelStyle",
+                    "Left" : 650,
+                    "Legend" : "Temperature",
+                    "LegendDisplayMode" : "bottom",
+                    "LegendStyle" : "VendingLegendStyle",
+                    "MaxValue" : 150,
+                    "MinValue" : 0,
+                    "MinorTickLength" : 1,
+                    "MinorTicks" : 5,
+                    "NeedleDiameter" : 12,
+                    "NeedleFormatter" : {
+                      "FieldName" : "salesVgoal",
+                      "StateDefinition" : "AcmeVendingGauge2",
+                      "StateDefinitionType" : "numeric",
+                      "StateFormats" : [ {
+                        "comparator" : "<",
+                        "state" : "RedIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "75"
+                      }, {
+                        "comparator" : "<",
+                        "state" : "YellowIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "90"
+                      }, {
+                        "state" : "GreenIndicatorMarker",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "NeedleLength" : 30,
+                    "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                    "ReferenceAngle" : 225,
+                    "ResponsiveLayout" : false,
+                    "RingWidth" : 10,
+                    "ShowDataLoading" : true,
+                    "ShowRanges" : true,
+                    "TickLength" : 2,
+                    "TickStyle" : "DefaultGaugeTickStyle",
+                    "ToolTipField" : "",
+                    "ToolTipStyle" : "DefaultTooltipStyle",
+                    "Top" : 0,
+                    "Type" : "gauge",
+                    "ValueDecimals" : 0,
+                    "ValueDigits" : 3,
+                    "ValueDisplayMode" : "none",
+                    "ValueFormatter_StateParameters" : [ ],
+                    "ValueStyle" : "DefaultTitle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 12,
+                    "__TypeDisplayName" : "Gauge",
+                    "__supportsTooltip" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Aperture" : 270,
+                    "Area" : "UI",
+                    "CenterDiameter" : 16,
+                    "CenterStyle" : "DefaultGaugeCenterStyle",
+                    "ChartStyle" : "DefaultChartStyle",
+                    "Decimals" : 0,
+                    "FaceDiameter" : 80,
+                    "FormatNeedle" : true,
+                    "GaugeBorder" : 8,
+                    "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                    "GaugeFaceStyle" : "VendingGaugeFaceStyle",
+                    "GaugeOffset" : 0,
+                    "GaugeScaling" : 70,
+                    "GaugeStyle" : "VendingGaugeStyle",
+                    "Height" : 138,
+                    "Id" : "Gauge-21",
+                    "Intervals" : 4,
+                    "IntervalsPerLabel" : 1,
+                    "LabelDecimals" : 0,
+                    "LabelDigits" : 3,
+                    "LabelDisplayMode" : "inside",
+                    "LabelStyle" : "DefaultGaugeLabelStyle",
+                    "Left" : 650,
+                    "Legend" : "Humidity",
+                    "LegendDisplayMode" : "bottom",
+                    "LegendStyle" : "VendingLegendStyle",
+                    "MaxValue" : 20,
+                    "MinValue" : 0,
+                    "MinorTickLength" : 1,
+                    "MinorTicks" : 5,
+                    "NeedleDiameter" : 12,
+                    "NeedleFormatter" : {
+                      "FieldName" : "outOfStockPct",
+                      "StateDefinition" : "AcmeVendingGauge1",
+                      "StateDefinitionType" : "numeric",
+                      "StateFormats" : [ {
+                        "comparator" : "<",
+                        "state" : "GreenIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "5"
+                      }, {
+                        "comparator" : "<",
+                        "state" : "YellowIndicatorMarker",
+                        "stateName" : "",
+                        "value" : "10"
+                      }, {
+                        "state" : "RedIndicatorMarker",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "NeedleLength" : 30,
+                    "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                    "ReferenceAngle" : 225,
+                    "ResponsiveLayout" : false,
+                    "RingWidth" : 10,
+                    "ShowDataLoading" : true,
+                    "ShowRanges" : true,
+                    "TickLength" : 2,
+                    "TickStyle" : "DefaultGaugeTickStyle",
+                    "ToolTipField" : "",
+                    "ToolTipStyle" : "DefaultTooltipStyle",
+                    "Top" : 139,
+                    "Type" : "gauge",
+                    "ValueDecimals" : 0,
+                    "ValueDigits" : 3,
+                    "ValueDisplayMode" : "none",
+                    "ValueFormatter_StateParameters" : [ ],
+                    "ValueStyle" : "DefaultGaugeStyle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 12,
+                    "__TypeDisplayName" : "Gauge",
+                    "__supportsTooltip" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AddNewPostInline" : false,
+                    "AllowNewPosts" : true,
+                    "Area" : "UI",
+                    "Blog" : "AcmeVendingMgtCommunications",
+                    "BlogButtonsActiveStyle" : "DefaultBlogButtonsActiveStyle",
+                    "BlogButtonsHoverStyle" : "DefaultBlogButtonsHoverStyle",
+                    "BlogButtonsStyle" : "VendingGaugeFaceStyle",
+                    "BlogHeaderStyle" : "AcmeVendingExtraLarge",
+                    "BlogLinksStyle" : "DefaultBlogLinksStyle",
+                    "BlogPostStyle" : "DefaultBlogPostStyle",
+                    "BlogPostToolbarStyle" : "DefaultBlogPostToolbarStyle",
+                    "BlogStyle" : "DefaultBlogStyle",
+                    "DisplayEditDate" : false,
+                    "EndDateTime" : "",
+                    "ExpandAll" : true,
+                    "FileRepository" : "SystemRepository",
+                    "FileRepositoryPath" : "/",
+                    "FilterTagVocabularyRestriction" : "",
+                    "Height" : 204,
+                    "HeightOfFullView" : 600,
+                    "HideTaggingUI" : false,
+                    "Id" : "Blog-19",
+                    "Left" : 0,
+                    "PostDateFormat" : "yyyy-MM-dd HH:mm",
+                    "ResponsiveLayout" : false,
+                    "SearchExpression" : "",
+                    "ShowDataLoading" : true,
+                    "ShowExpandInSummary" : true,
+                    "ShowSearchInSummary" : false,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "TagsForPostVocabularyRestriction" : "",
+                    "Title" : "Management Communication",
+                    "TitleCharacterLimit" : -1,
+                    "Top" : 350,
+                    "Type" : "blog",
+                    "View" : "Summary",
+                    "Visible" : true,
+                    "Width" : 648,
+                    "WidthOfFullView" : 800,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-52",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : false,
+                    "GradientOrientation" : "vertical",
+                    "GradientType" : "linear",
+                    "Height" : 557,
+                    "Id" : "Shape-52",
+                    "Left" : 650,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle",
+                    "ShapeType" : "rectangle",
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 165,
+                    "Z-index" : 8,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-55",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : true,
+                    "GradientOrientation" : "horizontal",
+                    "GradientType" : "radial",
+                    "Height" : 138,
+                    "Id" : "Shape-55",
+                    "Left" : 656,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle3",
+                    "ShapeType" : "circle",
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-56",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : true,
+                    "GradientOrientation" : "horizontal",
+                    "GradientType" : "radial",
+                    "Height" : 138,
+                    "Id" : "Shape-56",
+                    "Left" : 656,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle3",
+                    "ShapeType" : "circle",
+                    "ShowDataLoading" : true,
+                    "Top" : 139,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "Shape-58",
+                    "DynamicFillOrientation" : "vertical",
+                    "DynamicRangeMaximum" : 100,
+                    "DynamicRangeMinimum" : 0,
+                    "EnableDynamicFill" : true,
+                    "GradientOrientation" : "horizontal",
+                    "GradientType" : "radial",
+                    "Height" : 138,
+                    "Id" : "Shape-58",
+                    "Left" : 656,
+                    "RectangleCornerRadius" : 10,
+                    "ResponsiveLayout" : false,
+                    "ShapeFormatter_StateParameters" : [ ],
+                    "ShapeStyle" : "VendingShapeStyle3",
+                    "ShapeType" : "roundrect",
+                    "ShowDataLoading" : true,
+                    "Top" : 417,
+                    "Type" : "shape",
+                    "UnfilledBackgroundStyle" : "DefaultShapeUnfilledBackgroundStyle",
+                    "Visible" : true,
+                    "Width" : 150,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Shape"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Decimals" : 2,
+                    "Digits" : 5,
+                    "DisplayName" : "leddisplay-61",
+                    "Height" : 56,
+                    "Id" : "leddisplay-61",
+                    "LEDFormatter_StateParameters" : [ ],
+                    "LEDLabelStyle" : "DefaultWidgetLabelStyle",
+                    "LEDSize" : "normal",
+                    "LEDStyle" : "DefaultLEDStyle",
+                    "Label" : "Current Humidity",
+                    "LabelAlignment" : "left",
+                    "Left" : 660,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "ToolTipField" : "",
+                    "ToolTipStyle" : "DefaultTooltipStyle",
+                    "Top" : 460,
+                    "Type" : "leddisplay",
+                    "UseTheme" : false,
+                    "Visible" : true,
+                    "Width" : 154,
+                    "Z-index" : 10,
+                    "ZeroFill" : false,
+                    "__TypeDisplayName" : "LED Display",
+                    "__supportsLabel" : true,
+                    "__supportsTooltip" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Decimals" : 2,
+                    "Digits" : 5,
+                    "DisplayName" : "leddisplay-62",
+                    "Height" : 56,
+                    "Id" : "leddisplay-62",
+                    "LEDFormatter_StateParameters" : [ ],
+                    "LEDLabelStyle" : "DefaultWidgetLabelStyle",
+                    "LEDSize" : "normal",
+                    "LEDStyle" : "DefaultLEDStyle",
+                    "Label" : "Current Temperature",
+                    "LabelAlignment" : "left",
+                    "Left" : 650,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "ToolTipField" : "",
+                    "ToolTipStyle" : "DefaultTooltipStyle",
+                    "Top" : 315,
+                    "Type" : "leddisplay",
+                    "UseTheme" : false,
+                    "Visible" : true,
+                    "Width" : 154,
+                    "Z-index" : 10,
+                    "ZeroFill" : false,
+                    "__TypeDisplayName" : "LED Display",
+                    "__supportsLabel" : true,
+                    "__supportsTooltip" : true
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "page"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

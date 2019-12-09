@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2013"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-12-08T10:38:35.854+05:30"
+         name="Demo"
+         projectName="Worktree"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things>
+                <Thing>VendingNetworkServices</Thing>
+            </Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates>
+                <ThingTemplate>VendingMachineTemplate</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "DynamicThingTemplates_VendingMachineTemplate" : {
+                  "DataName" : "DynamicThingTemplates_VendingMachineTemplate",
+                  "EntityName" : "VendingMachineTemplate",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "08d0228b-8e88-4478-b922-43757ebb6b1e",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "f9c51347-e78e-4cf0-8641-c28ff8756725",
+                    "Name" : "GetPropertyValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetPropertyValues"
+                  } ]
+                },
+                "Networks_AcmeVending" : {
+                  "DataName" : "Networks_AcmeVending",
+                  "EntityName" : "AcmeVending",
+                  "EntityType" : "Networks",
+                  "Id" : "87a6b697-022f-4faa-8eba-f75e6742f104",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "085870b8-72f7-4ee1-9a83-41725e0efa67",
+                    "Name" : "GetNetworkConnections",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetNetworkConnections"
+                  } ]
+                },
+                "Networks_DemoNw" : {
+                  "DataName" : "Networks_DemoNw",
+                  "EntityName" : "DemoNw",
+                  "EntityType" : "Networks",
+                  "Id" : "fb7f17a9-3ec9-4c2d-8a9e-daa9fa9c4d2d",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "d4f53619-ead3-4788-b0ed-ddd367052260",
+                    "Name" : "GetNetworkConnections",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetNetworkConnections"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_VendingNetworkServices" : {
+                  "DataName" : "Things_VendingNetworkServices",
+                  "EntityName" : "VendingNetworkServices",
+                  "EntityType" : "Things",
+                  "Id" : "51649242-4b7b-4d99-bf70-be5815c74ba4",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "f4d05360-f81b-4e93-8092-a18546c4dae2",
+                    "Name" : "GetVendingNetwork1",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork1"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "bd4cbf08-239c-48a6-b9b1-5b297440d126",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetVendingNetwork1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "UI",
+                "TargetId" : "tree-13",
+                "TargetSection" : ""
+              }, {
+                "Id" : "2e7dbea9-fcf1-417b-9323-549823b02f27",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "to",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetVendingNetwork1",
+                "SourceSection" : "Things_VendingNetworkServices",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_VendingMachineTemplate"
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Networks_DemoNw",
+                "EventHandlerService" : "GetNetworkConnections",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "8383e027-237b-42ef-a300-3040469e1968"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Networks_AcmeVending",
+                "EventHandlerService" : "GetNetworkConnections",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "de0361e4-ba95-4e0b-bb7e-9f59dc72d639"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork1",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "9c4f1a1e-f7a3-4ded-8c84-19c0a33b94fb"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_VendingMachineTemplate",
+                "EventHandlerService" : "GetPropertyValues",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "8318367f-11fb-4900-87f5-3fc9b5a3d0bc"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleTheme" : "Base Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "MashupTemplate",
+                  "flex-grow" : 0,
+                  "flex-shrink" : 0,
+                  "id_index" : 17,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "flexcontainer-2",
+                    "Id" : "flexcontainer-2",
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultContainerStyle",
+                    "Type" : "flexcontainer",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Flex Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-height" : 0,
+                    "flex-shrink" : 0,
+                    "flex-width" : 0,
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "Header",
+                      "Id" : "flexcontainer-4",
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "Style" : "DefaultContainerStyle",
+                      "Type" : "flexcontainer",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Flex Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "column",
+                      "flex-grow" : 1,
+                      "flex-height" : 71,
+                      "flex-shrink" : 1,
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "space-around",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Alignment" : "left",
+                        "AllButTopRememberLastChoice" : true,
+                        "Area" : "UI",
+                        "ConfiguredOrDataDriven" : "configured",
+                        "DisplayName" : "menu-10",
+                        "DrivePageMashupOrBindToMashup" : "pagemashup",
+                        "EvenlySpacedMenuItems" : false,
+                        "Height" : 30,
+                        "IconMaxWidth" : 22,
+                        "Id" : "menu-10",
+                        "Left" : 120,
+                        "Levels" : "all",
+                        "Menu" : "DemoMenu",
+                        "MenuBackgroundStyle" : "DefaultMenuBackgroundStyle",
+                        "MenuHoverStyle" : "DefaultMenuHoverStyle",
+                        "MenuItemDisplay" : "iconleftoftext",
+                        "MenuLevelHoverStyle" : "DefaultMenuLevelHoverStyle",
+                        "MenuLevelSelectedStyle" : "DefaultMenuLevelSelectedStyle",
+                        "MenuLevelStyle" : "DefaultMenuLevelStyle",
+                        "MenuSelectedStyle" : "DefaultMenuSelectedStyle",
+                        "MenuStyle" : "DefaultMenuStyle",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "SubMenuHeight" : 10,
+                        "SubmenuWidthMatchParent" : false,
+                        "Top" : 30,
+                        "Type" : "menu",
+                        "UseTheme" : false,
+                        "View" : "horiz",
+                        "Visible" : true,
+                        "Width" : 250,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Menu"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "flexcontainer-5",
+                      "Id" : "flexcontainer-5",
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "Style" : "DefaultContainerStyle",
+                      "Type" : "flexcontainer",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Flex Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-height" : 0,
+                      "flex-shrink" : 0,
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "flex-start",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "Left Sidebar",
+                        "Id" : "flexcontainer-7",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Style" : "DefaultContainerStyle",
+                        "Type" : "flexcontainer",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Flex Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : 1,
+                        "flex-height" : 0,
+                        "flex-shrink" : 1,
+                        "flex-width" : 196,
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer-fixed",
+                        "isLocked" : false,
+                        "justify-content" : "flex-start",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "AutoSelectFirstRow" : false,
+                          "ClosedNodeFormatter_StateParameters" : [ ],
+                          "CollapseChildrenOfLevel" : 99,
+                          "DisplayName" : "tree-13",
+                          "Height" : 300,
+                          "IDField" : "to",
+                          "Id" : "tree-13",
+                          "LabelField" : "description",
+                          "Left" : 20,
+                          "NoChildFormatter_StateParameters" : [ ],
+                          "OpenNodeFormatter_StateParameters" : [ ],
+                          "ParentIDField" : "from",
+                          "ResponsiveLayout" : true,
+                          "RootParentID" : "",
+                          "SelectedBreadcrumb" : "",
+                          "ShowDataLoading" : true,
+                          "TooltipField" : "description",
+                          "Top" : 30,
+                          "TreeBGStyle" : "DefaultTreeBGStyle",
+                          "TreeFormatter" : {
+                            "FieldName" : "connectionType",
+                            "StateDefinition" : "AcmeVendingGauge1",
+                            "StateDefinitionType" : "numeric",
+                            "StateFormats" : [ {
+                              "comparator" : "<",
+                              "state" : "GreenIndicatorMarker",
+                              "stateName" : "",
+                              "value" : "20"
+                            }, {
+                              "comparator" : "<",
+                              "state" : "YellowIndicatorMarker",
+                              "stateName" : "",
+                              "value" : "40"
+                            }, {
+                              "state" : "RedIndicatorMarker",
+                              "stateName" : ""
+                            } ]
+                          },
+                          "TreeFormatter_StateParameters" : [ ],
+                          "TreeSelectedStyle" : "DefaultTreeSelectedStyle",
+                          "Type" : "tree",
+                          "ValueField" : "to",
+                          "Visible" : true,
+                          "Width" : 225,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Tree"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "Body",
+                        "Id" : "flexcontainer-8",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Style" : "DefaultContainerStyle",
+                        "Type" : "flexcontainer",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Flex Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : 1,
+                        "flex-height" : 0,
+                        "flex-shrink" : 1,
+                        "flex-width" : 0,
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer",
+                        "isLocked" : true,
+                        "justify-content" : "flex-start",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "DisplayName" : "mashupcontainer-17",
+                          "Height" : 300,
+                          "Id" : "mashupcontainer-17",
+                          "Left" : 35,
+                          "MashupParameters" : [ ],
+                          "Name" : "VendingMachineMash",
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "TabSequenceGroup" : 0,
+                          "Top" : 25,
+                          "Type" : "mashupcontainer",
+                          "Visible" : true,
+                          "Width" : 400,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Contained Mashup"
+                        },
+                        "Widgets" : [ ]
+                      } ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "Right Sidebar",
+                        "Id" : "flexcontainer-6",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "Style" : "DefaultContainerStyle",
+                        "Type" : "flexcontainer",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Flex Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : 1,
+                        "flex-height" : 0,
+                        "flex-shrink" : 0,
+                        "flex-width" : 196,
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer-fixed",
+                        "isLocked" : false,
+                        "justify-content" : "flex-start",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "Footer",
+                      "Id" : "flexcontainer-3",
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "Style" : "DefaultContainerStyle",
+                      "Type" : "flexcontainer",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Flex Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-height" : 56,
+                      "flex-shrink" : 0,
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashupTemplate"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

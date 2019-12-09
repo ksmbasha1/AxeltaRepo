@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2013"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
+    <Organizations>
+        <Organization
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-12-08T22:16:43.954+05:30"
+         loginButtonStyle=""
+         loginPrompt=""
+         loginResetPassword="false"
+         loginStyle=""
+         mobileMashup=""
+         name="Manufacturing Plants"
+         projectName="Worktree"
+         resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&#xA;&#xA;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;"
+         resetMailServer=""
+         resetMailSubject="[[resetemail.subject]]"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <loginImage></loginImage>
+            <Connections>
+                <Connection
+                 from=""
+                 to="Manufacturing Plants"></Connection>
+                <Connection
+                 from="Manufacturing Plants"
+                 to="Business unit1"></Connection>
+                <Connection
+                 from="Business unit1"
+                 to="VM-TR1"></Connection>
+                <Connection
+                 from="Business unit1"
+                 to="VM-TR2"></Connection>
+                <Connection
+                 from="Manufacturing Plants"
+                 to="Business Unit2"></Connection>
+                <Connection
+                 from="Business Unit2"
+                 to="VM-TR3"></Connection>
+            </Connections>
+            <OrganizationalUnits>
+                <OrganizationalUnit
+                 description=""
+                 name="Business unit1">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="Business Unit1"
+                             type="Group"></Member>
+                            <Member
+                             name="BU1"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Business Unit2">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="Business Unit2"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="Manufacturing Plants">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="VM-TR1">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="dev1"
+                             type="User"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="VM-TR2">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+                <OrganizationalUnit
+                 description=""
+                 name="VM-TR3">
+                    <Members>
+                        <Members></Members>
+                    </Members>
+                </OrganizationalUnit>
+            </OrganizationalUnits>
+        </Organization>
+    </Organizations>
+</Entities>

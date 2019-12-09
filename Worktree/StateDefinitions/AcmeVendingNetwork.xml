@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2013"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-12-08T10:38:35.842+05:30"
+         name="AcmeVendingNetwork"
+         projectName="Worktree"
+         tags="Applications:AcmeVending">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Manufacturing Plants"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "AcmeVendingRegionIcon",
+                "defaultValue" : "Region:",
+                "description" : "",
+                "displayString" : "Region",
+                "name" : "Region"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingSiteIcon",
+                "defaultValue" : "Site:",
+                "description" : "",
+                "displayString" : "Site",
+                "name" : "Site"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingVMIcon",
+                "defaultValue" : "VerySmartVendingMach:true",
+                "description" : "",
+                "displayString" : "VerySmartVendingMach",
+                "name" : "VerySmartVendingMach"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingVMIconOOS",
+                "defaultValue" : "VerySmartVendingMach:false",
+                "description" : "",
+                "displayString" : "VerySmartVendingMach",
+                "name" : "VerySmartVendingMach"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingVMIcon",
+                "defaultValue" : "BuildDemoVendingMachine:true",
+                "description" : "",
+                "displayString" : "BuildDemoVendingMachine",
+                "name" : "BuildDemoVendingMachine"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingVMIconOOS",
+                "defaultValue" : "BuildDemoVendingMachine:false",
+                "description" : "",
+                "displayString" : "BuildDemoVendingMachine",
+                "name" : "BuildDemoVendingMachine"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingIcon",
+                "defaultValue" : "Corp:",
+                "description" : "",
+                "displayString" : "Corp",
+                "name" : "Corp"
+              }, {
+                "defaultStyleDefinition" : "AcmeVendingVMIcon",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>
