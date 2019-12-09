@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b2013"
+ build="b535"
  majorVersion="8"
- minorVersion="4"
+ minorVersion="3"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="0"
- schemaVersion="1040"
- universal="password">
+ revision="2"
+ schemaVersion="1030"
+ universal="">
     <ThingTemplates>
         <ThingTemplate
          baseThingTemplate="GenericThing"
@@ -14,7 +14,7 @@
          documentationContent=""
          effectiveThingPackage="ConfiguredThing"
          homeMashup=""
-         lastModifiedDate="2019-12-09T14:22:52.612+05:30"
+         lastModifiedDate="2019-12-09T09:43:52.159Z"
          name="BuildDemoVendingMachine"
          projectName="Worktree"
          tags="Applications:AcmeVending"
@@ -70,10 +70,8 @@
                 <ServiceImplementations></ServiceImplementations>
                 <Subscriptions>
                     <Subscription
-                     description=""
                      enabled="true"
                      eventName="DataChange"
-                     name="Event.DataChange:Property.CurrentTemp"
                      source=""
                      sourceProperty="CurrentTemp"
                      sourceType="Thing">

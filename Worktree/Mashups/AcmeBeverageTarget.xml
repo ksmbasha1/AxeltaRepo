@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b2013"
+ build="b535"
  majorVersion="8"
- minorVersion="4"
+ minorVersion="3"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="0"
- schemaVersion="1040"
- universal="password">
+ revision="2"
+ schemaVersion="1030"
+ universal="">
     <Mashups>
         <Mashup
          aspect.isResponsive="false"
@@ -15,7 +15,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T14:22:52.692+05:30"
+         lastModifiedDate="2019-12-09T09:43:52.250Z"
          name="AcmeBeverageTarget"
          projectName="Worktree"
          rows="0.0"
@@ -285,7 +285,6 @@
             }
             ]]>
             </mashupContent>
-            <preview></preview>
         </Mashup>
     </Mashups>
 </Entities>

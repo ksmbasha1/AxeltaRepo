@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b2013"
+ build="b535"
  majorVersion="8"
- minorVersion="4"
+ minorVersion="3"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="0"
- schemaVersion="1040"
- universal="password">
+ revision="2"
+ schemaVersion="1030"
+ universal="">
     <ThingTemplates>
         <ThingTemplate
          baseThingTemplate="GenericThing"
@@ -14,7 +14,7 @@
          documentationContent=""
          effectiveThingPackage="ConfiguredThing"
          homeMashup=""
-         lastModifiedDate="2019-12-09T14:22:52.599+05:30"
+         lastModifiedDate="2019-12-09T09:43:52.154Z"
          name="VendingMachineTemplate"
          projectName="Worktree"
          tags="Applications:ThingworxTraining"
@@ -51,11 +51,19 @@
                          isPermitted="true"
                          name="BU1Manager"
                          type="User"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ksmb"
+                         type="User"></Principal>
                     </PropertyRead>
                     <PropertyWrite>
                         <Principal
                          isPermitted="true"
                          name="BU1Manager"
+                         type="User"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ksmb"
                          type="User"></Principal>
                     </PropertyWrite>
                     <ServiceInvoke>
@@ -63,11 +71,19 @@
                          isPermitted="true"
                          name="BU1Manager"
                          type="User"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ksmb"
+                         type="User"></Principal>
                     </ServiceInvoke>
                     <EventInvoke>
                         <Principal
                          isPermitted="true"
                          name="BU1Manager"
+                         type="User"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ksmb"
                          type="User"></Principal>
                     </EventInvoke>
                     <EventSubscribe>
@@ -75,11 +91,19 @@
                          isPermitted="true"
                          name="BU1Manager"
                          type="User"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="ksmb"
+                         type="User"></Principal>
                     </EventSubscribe>
                 </Permissions>
             </RunTimePermissions>
             <VisibilityPermissions>
                 <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Enduser"
+                     type="Organization"></Principal>
                     <Principal
                      isPermitted="true"
                      name="Manufacturing Plants"
@@ -117,7 +141,21 @@
                 <Delete></Delete>
                 <Metadata></Metadata>
             </InstanceDesignTimePermissions>
-            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceRunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Basha"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke></ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </InstanceRunTimePermissions>
             <InstanceVisibilityPermissions>
                 <Visibility></Visibility>
             </InstanceVisibilityPermissions>
