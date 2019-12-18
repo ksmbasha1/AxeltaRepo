@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b535"
+ build="b2013"
  majorVersion="8"
- minorVersion="3"
+ minorVersion="4"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="2"
- schemaVersion="1030"
- universal="">
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
     <ThingShapes>
         <ThingShape
          className=""
          description="Shape for the Vending Machine"
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T09:43:52.124Z"
+         lastModifiedDate="2019-12-09T14:42:51.862+05:30"
          name="VendingMachineShape"
          projectName="Worktree"
          tags="Applications:ThingworxTraining">
@@ -119,15 +119,17 @@
             <ServiceImplementations></ServiceImplementations>
             <Subscriptions>
                 <Subscription
+                 description="CurrentTemperature Subscription"
                  enabled="true"
                  eventName="Alert"
+                 name="TempSubscrip"
                  source=""
                  sourceProperty="CurrentTemperature"
                  sourceType="Thing">
                     <ServiceImplementation
                      description=""
                      handlerName="Script"
-                     name="Event.Alert:Property.CurrentTemperature">
+                     name="TempSubscrip">
                         <ConfigurationTables>
                             <ConfigurationTable
                              description=""
@@ -172,38 +174,9 @@
                 <Delete></Delete>
                 <Metadata></Metadata>
             </DesignTimePermissions>
-            <RunTimePermissions>
-                <Permissions
-                 resourceName="*">
-                    <PropertyRead>
-                        <Principal
-                         isPermitted="true"
-                         name="ksmb"
-                         type="User"></Principal>
-                    </PropertyRead>
-                    <PropertyWrite>
-                        <Principal
-                         isPermitted="true"
-                         name="ksmb"
-                         type="User"></Principal>
-                    </PropertyWrite>
-                    <ServiceInvoke>
-                        <Principal
-                         isPermitted="true"
-                         name="ksmb"
-                         type="User"></Principal>
-                    </ServiceInvoke>
-                    <EventInvoke></EventInvoke>
-                    <EventSubscribe></EventSubscribe>
-                </Permissions>
-            </RunTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
             <VisibilityPermissions>
-                <Visibility>
-                    <Principal
-                     isPermitted="true"
-                     name="Enduser"
-                     type="Organization"></Principal>
-                </Visibility>
+                <Visibility></Visibility>
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>

@@ -15,22 +15,76 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T14:42:52.226+05:30"
-         name="VendingDashboard1"
+         lastModifiedDate="2019-12-11T17:18:29.269+05:30"
+         name="VendingDashboard3"
          projectName="Worktree"
          rows="0.0"
          tags="Applications:AcmeVending">
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
-                <Read></Read>
-                <Update></Update>
-                <Delete></Delete>
+                <Read>
+                    <Principal
+                     isPermitted="true"
+                     name="dev1"
+                     type="User"></Principal>
+                </Read>
+                <Update>
+                    <Principal
+                     isPermitted="true"
+                     name="dev1"
+                     type="User"></Principal>
+                </Update>
+                <Delete>
+                    <Principal
+                     isPermitted="true"
+                     name="dev1"
+                     type="User"></Principal>
+                </Delete>
                 <Metadata></Metadata>
             </DesignTimePermissions>
-            <RunTimePermissions></RunTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </EventInvoke>
+                    <EventSubscribe>
+                        <Principal
+                         isPermitted="true"
+                         name="BU1Manager"
+                         type="User"></Principal>
+                    </EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
             <VisibilityPermissions>
-                <Visibility></Visibility>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Manufacturing Plants"
+                     type="Organization"></Principal>
+                </Visibility>
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
@@ -80,24 +134,6 @@
                   "Services" : [ {
                     "APIMethod" : "post",
                     "Characteristic" : "Services",
-                    "Id" : "701320869966326",
-                    "Name" : "GetDashboardData",
-                    "Parameters" : { },
-                    "RefreshInterval" : 0,
-                    "Target" : "GetDashboardData"
-                  }, {
-                    "APIMethod" : "post",
-                    "Characteristic" : "Services",
-                    "Id" : "741320869966360",
-                    "Name" : "GetVendingNetwork",
-                    "Parameters" : {
-                      "filter" : "blank"
-                    },
-                    "RefreshInterval" : 0,
-                    "Target" : "GetVendingNetwork"
-                  }, {
-                    "APIMethod" : "post",
-                    "Characteristic" : "Services",
                     "Id" : "0be4cc21-0bf8-4a19-8724-aec58db542ec",
                     "Name" : "GetDashboardData1",
                     "Parameters" : { },
@@ -113,6 +149,16 @@
                     },
                     "RefreshInterval" : 0,
                     "Target" : "GetVendingNetwork1"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "b87bdb1d-0262-48be-9adf-0d976bc46efa",
+                    "Name" : "GetVendingNetwork3",
+                    "Parameters" : {
+                      "filter" : "AcmeVendingCorp1"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetVendingNetwork3"
                   } ]
                 },
                 "UserExtensions" : {
@@ -246,7 +292,22 @@
                 "TargetId" : "leddisplay-61",
                 "TargetSection" : ""
               }, {
-                "Id" : "d3da0ef1-af03-4ace-bfec-d94e1c3c95ed",
+                "Id" : "95da925a-bd35-479c-a0ee-42de5e0dae03",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "filter",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetVendingNetwork3",
+                "TargetSection" : "Things_VendingNetworkServices"
+              }, {
+                "Id" : "1c027dab-b364-4e7f-8503-f4060f0e54f0",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "",
                   "SourcePropertyBaseType" : "INFOTABLE",
@@ -257,7 +318,7 @@
                 } ],
                 "SourceArea" : "Data",
                 "SourceDetails" : "AllData",
-                "SourceId" : "GetVendingNetwork1",
+                "SourceId" : "GetVendingNetwork3",
                 "SourceSection" : "Things_VendingNetworkServices",
                 "TargetArea" : "UI",
                 "TargetId" : "GoogleMap-6",
@@ -265,10 +326,22 @@
               } ],
               "DesignTimePermissions" : {
                 "Create" : [ ],
-                "Delete" : [ ],
+                "Delete" : [ {
+                  "isPermitted" : true,
+                  "name" : "dev1",
+                  "type" : "User"
+                } ],
                 "Metadata" : [ ],
-                "Read" : [ ],
-                "Update" : [ ]
+                "Read" : [ {
+                  "isPermitted" : true,
+                  "name" : "dev1",
+                  "type" : "User"
+                } ],
+                "Update" : [ {
+                  "isPermitted" : true,
+                  "name" : "dev1",
+                  "type" : "User"
+                } ]
               },
               "Events" : [ {
                 "EventHandlerArea" : "Data",
@@ -288,9 +361,54 @@
                 "EventTriggerId" : "mashup-root",
                 "EventTriggerSection" : "",
                 "Id" : "c4d9ccd9-5b38-47fc-b993-1712b140bc72"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork3",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "d7b7d290-4079-40d4-a9cd-4171ef72016f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_VendingNetworkServices",
+                "EventHandlerService" : "GetVendingNetwork3",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "c6c46fd1-7ed3-428b-bab3-facd516796f1"
               } ],
               "RunTimePermissions" : {
-                "permissions" : [ ]
+                "permissions" : [ {
+                  "EventInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "EventSubscribe" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "PropertyRead" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "PropertyWrite" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "ServiceInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "resourceName" : "*"
+                } ]
               },
               "UI" : {
                 "Properties" : {
@@ -345,7 +463,7 @@
                     "Description" : "ZoomLevel",
                     "ParameterName" : "Zoom"
                   } ],
-                  "id_index" : 62
+                  "id_index" : 66
                 },
                 "Widgets" : [ {
                   "Properties" : {
@@ -432,7 +550,7 @@
                     "LabelDisplayMode" : "inside",
                     "LabelStyle" : "DefaultGaugeLabelStyle",
                     "Left" : 650,
-                    "Legend" : "Sales Goal %",
+                    "Legend" : "Temperature",
                     "LegendDisplayMode" : "bottom",
                     "LegendStyle" : "VendingLegendStyle",
                     "MaxValue" : 150,
@@ -509,7 +627,7 @@
                     "LabelDisplayMode" : "inside",
                     "LabelStyle" : "DefaultGaugeLabelStyle",
                     "Left" : 650,
-                    "Legend" : "Stock Out %",
+                    "Legend" : "Humidity",
                     "LegendDisplayMode" : "bottom",
                     "LegendStyle" : "VendingLegendStyle",
                     "MaxValue" : 20,
@@ -559,54 +677,6 @@
                     "Z-index" : 12,
                     "__TypeDisplayName" : "Gauge",
                     "__supportsTooltip" : true
-                  },
-                  "Widgets" : [ ]
-                }, {
-                  "Properties" : {
-                    "AddNewPostInline" : false,
-                    "AllowNewPosts" : true,
-                    "Area" : "UI",
-                    "Blog" : "AcmeVendingMgtCommunications",
-                    "BlogButtonsActiveStyle" : "DefaultBlogButtonsActiveStyle",
-                    "BlogButtonsHoverStyle" : "DefaultBlogButtonsHoverStyle",
-                    "BlogButtonsStyle" : "VendingGaugeFaceStyle",
-                    "BlogHeaderStyle" : "AcmeVendingExtraLarge",
-                    "BlogLinksStyle" : "DefaultBlogLinksStyle",
-                    "BlogPostStyle" : "DefaultBlogPostStyle",
-                    "BlogPostToolbarStyle" : "DefaultBlogPostToolbarStyle",
-                    "BlogStyle" : "DefaultBlogStyle",
-                    "DisplayEditDate" : false,
-                    "EndDateTime" : "",
-                    "ExpandAll" : true,
-                    "FileRepository" : "SystemRepository",
-                    "FileRepositoryPath" : "/",
-                    "FilterTagVocabularyRestriction" : "",
-                    "Height" : 204,
-                    "HeightOfFullView" : 600,
-                    "HideTaggingUI" : false,
-                    "Id" : "Blog-19",
-                    "Left" : 0,
-                    "PostDateFormat" : "yyyy-MM-dd HH:mm",
-                    "ResponsiveLayout" : false,
-                    "SearchExpression" : "",
-                    "ShowDataLoading" : true,
-                    "ShowExpandInSummary" : true,
-                    "ShowSearchInSummary" : false,
-                    "SortOrder" : "Newest",
-                    "Source" : "",
-                    "StartDateTime" : "",
-                    "TagsForPostVocabularyRestriction" : "",
-                    "Title" : "Management Communication",
-                    "TitleCharacterLimit" : -1,
-                    "Top" : 350,
-                    "Type" : "blog",
-                    "View" : "Summary",
-                    "Visible" : true,
-                    "Width" : 648,
-                    "WidthOfFullView" : 800,
-                    "WordsInPosts" : 100,
-                    "Z-index" : 10,
-                    "__TypeDisplayName" : "Blog"
                   },
                   "Widgets" : [ ]
                 }, {
@@ -710,7 +780,7 @@
                     "ResponsiveLayout" : false,
                     "ShapeFormatter_StateParameters" : [ ],
                     "ShapeStyle" : "VendingShapeStyle3",
-                    "ShapeType" : "circle",
+                    "ShapeType" : "roundrect",
                     "ShowDataLoading" : true,
                     "Top" : 417,
                     "Type" : "shape",
@@ -733,14 +803,14 @@
                     "LEDLabelStyle" : "DefaultWidgetLabelStyle",
                     "LEDSize" : "normal",
                     "LEDStyle" : "DefaultLEDStyle",
-                    "Label" : "",
+                    "Label" : "Current Humidity",
                     "LabelAlignment" : "left",
-                    "Left" : 660,
+                    "Left" : 655.0000305175781,
                     "ResponsiveLayout" : false,
                     "ShowDataLoading" : true,
                     "ToolTipField" : "",
                     "ToolTipStyle" : "DefaultTooltipStyle",
-                    "Top" : 460,
+                    "Top" : 415.00001525878906,
                     "Type" : "leddisplay",
                     "UseTheme" : false,
                     "Visible" : true,
@@ -764,7 +834,7 @@
                     "LEDLabelStyle" : "DefaultWidgetLabelStyle",
                     "LEDSize" : "normal",
                     "LEDStyle" : "DefaultLEDStyle",
-                    "Label" : "",
+                    "Label" : "Current Temperature",
                     "LabelAlignment" : "left",
                     "Left" : 650,
                     "ResponsiveLayout" : false,
@@ -781,6 +851,49 @@
                     "__TypeDisplayName" : "LED Display",
                     "__supportsLabel" : true,
                     "__supportsTooltip" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AddNewPostInline" : false,
+                    "AllowNewPosts" : true,
+                    "Area" : "UI",
+                    "Blog" : "AcmeVendingMaintenanceBlog",
+                    "BlogButtonsActiveStyle" : "DefaultBlogButtonsActiveStyle",
+                    "BlogButtonsHoverStyle" : "DefaultBlogButtonsHoverStyle",
+                    "BlogButtonsStyle" : "DefaultBlogButtonsStyle",
+                    "BlogHeaderStyle" : "DefaultBlogHeaderStyle",
+                    "BlogLinksStyle" : "DefaultBlogLinksStyle",
+                    "BlogPostStyle" : "DefaultBlogPostStyle",
+                    "BlogPostToolbarStyle" : "DefaultBlogPostToolbarStyle",
+                    "BlogStyle" : "DefaultBlogStyle",
+                    "DisplayEditDate" : false,
+                    "DisplayName" : "blog-66",
+                    "EndDateTime" : "",
+                    "FileRepository" : "SystemRepository",
+                    "FileRepositoryPath" : "/",
+                    "FilterTagVocabularyRestriction" : "",
+                    "Height" : 230,
+                    "HideTaggingUI" : false,
+                    "Id" : "blog-66",
+                    "Left" : 0,
+                    "PostDateFormat" : "yyyy-MM-dd HH:mm",
+                    "ResponsiveLayout" : false,
+                    "SearchExpression" : "",
+                    "ShowDataLoading" : true,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "TagsForPostVocabularyRestriction" : "",
+                    "TitleCharacterLimit" : -1,
+                    "Top" : 326,
+                    "Type" : "blog",
+                    "View" : "summary",
+                    "Visible" : true,
+                    "Width" : 645,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
                   },
                   "Widgets" : [ ]
                 } ]

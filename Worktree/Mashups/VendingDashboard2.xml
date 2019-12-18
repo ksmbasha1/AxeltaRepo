@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b535"
+ build="b2013"
  majorVersion="8"
- minorVersion="3"
+ minorVersion="4"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="2"
- schemaVersion="1030"
- universal="">
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
     <Mashups>
         <Mashup
          aspect.isResponsive="false"
@@ -15,7 +15,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T09:43:51.969Z"
+         lastModifiedDate="2019-12-11T13:50:53.101+05:30"
          name="VendingDashboard2"
          projectName="Worktree"
          rows="0.0"
@@ -319,10 +319,22 @@
               } ],
               "DesignTimePermissions" : {
                 "Create" : [ ],
-                "Delete" : [ ],
+                "Delete" : [ {
+                  "isPermitted" : true,
+                  "name" : "dev1",
+                  "type" : "User"
+                } ],
                 "Metadata" : [ ],
-                "Read" : [ ],
-                "Update" : [ ]
+                "Read" : [ {
+                  "isPermitted" : true,
+                  "name" : "dev1",
+                  "type" : "User"
+                } ],
+                "Update" : [ {
+                  "isPermitted" : true,
+                  "name" : "dev1",
+                  "type" : "User"
+                } ]
               },
               "Events" : [ {
                 "EventHandlerArea" : "Data",
@@ -344,7 +356,34 @@
                 "Id" : "c4d9ccd9-5b38-47fc-b993-1712b140bc72"
               } ],
               "RunTimePermissions" : {
-                "permissions" : [ ]
+                "permissions" : [ {
+                  "EventInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "EventSubscribe" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "PropertyRead" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "PropertyWrite" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "ServiceInvoke" : [ {
+                    "isPermitted" : true,
+                    "name" : "BU1Manager",
+                    "type" : "User"
+                  } ],
+                  "resourceName" : "*"
+                } ]
               },
               "UI" : {
                 "Properties" : {
@@ -399,7 +438,7 @@
                     "Description" : "ZoomLevel",
                     "ParameterName" : "Zoom"
                   } ],
-                  "id_index" : 62
+                  "id_index" : 67
                 },
                 "Widgets" : [ {
                   "Properties" : {
@@ -409,7 +448,7 @@
                     "EnableMarkerSelection" : false,
                     "EnableRegionSelection" : false,
                     "EndMarkerStyle" : "DefaultMapEndStyle",
-                    "Height" : 350,
+                    "Height" : 355,
                     "Id" : "GoogleMap-6",
                     "Left" : 0,
                     "LocationField" : "location",
@@ -617,54 +656,6 @@
                   "Widgets" : [ ]
                 }, {
                   "Properties" : {
-                    "AddNewPostInline" : false,
-                    "AllowNewPosts" : true,
-                    "Area" : "UI",
-                    "Blog" : "AcmeVendingMgtCommunications",
-                    "BlogButtonsActiveStyle" : "DefaultBlogButtonsActiveStyle",
-                    "BlogButtonsHoverStyle" : "DefaultBlogButtonsHoverStyle",
-                    "BlogButtonsStyle" : "VendingGaugeFaceStyle",
-                    "BlogHeaderStyle" : "AcmeVendingExtraLarge",
-                    "BlogLinksStyle" : "DefaultBlogLinksStyle",
-                    "BlogPostStyle" : "DefaultBlogPostStyle",
-                    "BlogPostToolbarStyle" : "DefaultBlogPostToolbarStyle",
-                    "BlogStyle" : "DefaultBlogStyle",
-                    "DisplayEditDate" : false,
-                    "EndDateTime" : "",
-                    "ExpandAll" : true,
-                    "FileRepository" : "SystemRepository",
-                    "FileRepositoryPath" : "/",
-                    "FilterTagVocabularyRestriction" : "",
-                    "Height" : 204,
-                    "HeightOfFullView" : 600,
-                    "HideTaggingUI" : false,
-                    "Id" : "Blog-19",
-                    "Left" : 0,
-                    "PostDateFormat" : "yyyy-MM-dd HH:mm",
-                    "ResponsiveLayout" : false,
-                    "SearchExpression" : "",
-                    "ShowDataLoading" : true,
-                    "ShowExpandInSummary" : true,
-                    "ShowSearchInSummary" : false,
-                    "SortOrder" : "Newest",
-                    "Source" : "",
-                    "StartDateTime" : "",
-                    "TagsForPostVocabularyRestriction" : "",
-                    "Title" : "Management Communication",
-                    "TitleCharacterLimit" : -1,
-                    "Top" : 350,
-                    "Type" : "blog",
-                    "View" : "Summary",
-                    "Visible" : true,
-                    "Width" : 648,
-                    "WidthOfFullView" : 800,
-                    "WordsInPosts" : 100,
-                    "Z-index" : 10,
-                    "__TypeDisplayName" : "Blog"
-                  },
-                  "Widgets" : [ ]
-                }, {
-                  "Properties" : {
                     "Area" : "UI",
                     "DisplayName" : "Shape-52",
                     "DynamicFillOrientation" : "vertical",
@@ -837,12 +828,56 @@
                     "__supportsTooltip" : true
                   },
                   "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AddNewPostInline" : false,
+                    "AllowNewPosts" : true,
+                    "Area" : "UI",
+                    "Blog" : "AcmeVendingEquiptmentBlog",
+                    "BlogButtonsActiveStyle" : "DefaultBlogButtonsActiveStyle",
+                    "BlogButtonsHoverStyle" : "DefaultBlogButtonsHoverStyle",
+                    "BlogButtonsStyle" : "DefaultBlogButtonsStyle",
+                    "BlogHeaderStyle" : "DefaultBlogHeaderStyle",
+                    "BlogLinksStyle" : "DefaultBlogLinksStyle",
+                    "BlogPostStyle" : "DefaultBlogPostStyle",
+                    "BlogPostToolbarStyle" : "DefaultBlogPostToolbarStyle",
+                    "BlogStyle" : "DefaultBlogStyle",
+                    "DisplayEditDate" : false,
+                    "DisplayName" : "blog-67",
+                    "EndDateTime" : "",
+                    "FileRepository" : "SystemRepository",
+                    "FileRepositoryPath" : "/",
+                    "FilterTagVocabularyRestriction" : "",
+                    "Height" : 205,
+                    "HideTaggingUI" : false,
+                    "Id" : "blog-67",
+                    "Left" : 0,
+                    "PostDateFormat" : "yyyy-MM-dd HH:mm",
+                    "ResponsiveLayout" : false,
+                    "SearchExpression" : "",
+                    "ShowDataLoading" : true,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "TagsForPostVocabularyRestriction" : "",
+                    "TitleCharacterLimit" : -1,
+                    "Top" : 350.00000762939453,
+                    "Type" : "blog",
+                    "View" : "summary",
+                    "Visible" : true,
+                    "Width" : 645,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
+                  },
+                  "Widgets" : [ ]
                 } ]
               },
               "mashupType" : "page"
             }
             ]]>
             </mashupContent>
+            <preview></preview>
         </Mashup>
     </Mashups>
 </Entities>

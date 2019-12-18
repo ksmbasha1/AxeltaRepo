@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b535"
+ build="b2013"
  majorVersion="8"
- minorVersion="3"
+ minorVersion="4"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="2"
- schemaVersion="1030"
- universal="">
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
     <StateDefinitions>
         <StateDefinition
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T09:43:52.177Z"
+         lastModifiedDate="2019-12-09T14:42:52.094+05:30"
          name="AcmeVendingGauge2"
          projectName="Worktree"
          tags="Applications:AcmeVending">

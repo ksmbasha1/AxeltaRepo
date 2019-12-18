@@ -7,36 +7,22 @@
  revision="0"
  schemaVersion="1040"
  universal="password">
-    <Networks>
-        <Network
+    <DataShapes>
+        <DataShape
+         baseDataShape=""
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-11T11:27:42.770+05:30"
-         name="DemoNw"
+         lastModifiedDate="2019-12-11T11:38:59.668+05:30"
+         name="DashBoardData2"
          projectName="Worktree"
-         tags="">
+         tags="Applications:AcmeVending">
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
-                <Read>
-                    <Principal
-                     isPermitted="true"
-                     name="dev1"
-                     type="User"></Principal>
-                </Read>
-                <Update>
-                    <Principal
-                     isPermitted="true"
-                     name="dev1"
-                     type="User"></Principal>
-                </Update>
-                <Delete>
-                    <Principal
-                     isPermitted="true"
-                     name="dev1"
-                     type="User"></Principal>
-                </Delete>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
                 <Metadata></Metadata>
             </DesignTimePermissions>
             <RunTimePermissions>
@@ -84,32 +70,26 @@
             </VisibilityPermissions>
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
-            <Connections>
-                <Connection
-                 connectionType="Contains"
-                 from=""
-                 to="AcmeVendingCorp1"></Connection>
-                <Connection
-                 connectionType="Contains"
-                 from="AcmeVendingCorp1"
-                 to="Business unit 1"></Connection>
-                <Connection
-                 connectionType="Contains"
-                 from="AcmeVendingCorp1"
-                 to="Business Unit 2"></Connection>
-                <Connection
-                 connectionType="Contains"
-                 from="Business Unit 2"
-                 to="VM-TR3"></Connection>
-                <Connection
-                 connectionType="Contains"
-                 from="Business unit 1"
-                 to="VM-TR1"></Connection>
-                <Connection
-                 connectionType="Contains"
-                 from="Business unit 1"
-                 to="VM-TR2"></Connection>
-            </Connections>
-        </Network>
-    </Networks>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="CurrentHumidity"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="CurrentTemperature"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="LOCATION"
+                 description=""
+                 name="Location"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
 </Entities>

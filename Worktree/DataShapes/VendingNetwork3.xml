@@ -13,8 +13,8 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T14:42:51.850+05:30"
-         name="VendingNetwork1"
+         lastModifiedDate="2019-12-11T15:25:02.870+05:30"
+         name="VendingNetwork3"
          projectName="Worktree"
          tags="Applications:AcmeVending">
             <avatar></avatar>
@@ -94,12 +94,6 @@
                  ordinal="0"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="complaints"
-                 ordinal="0"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
                  baseType="STRING"
                  description=""
                  name="connectionType"
@@ -130,39 +124,9 @@
                  ordinal="0"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"
-                 baseType="BOOLEAN"
-                 description=""
-                 name="inService"
-                 ordinal="0"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="inServicePct"
-                 ordinal="0"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
                  baseType="LOCATION"
                  description=""
                  name="location"
-                 ordinal="0"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="LOCATION"
-                 description=""
-                 name="Location"
-                 ordinal="3"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="outOfStockPct"
-                 ordinal="0"></FieldDefinition>
-                <FieldDefinition
-                 aspect.isPrimaryKey="false"
-                 baseType="NUMBER"
-                 description=""
-                 name="salesVgoal"
                  ordinal="0"></FieldDefinition>
                 <FieldDefinition
                  aspect.isPrimaryKey="false"

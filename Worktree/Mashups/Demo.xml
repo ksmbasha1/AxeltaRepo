@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entities
- build="b535"
+ build="b2013"
  majorVersion="8"
- minorVersion="3"
+ minorVersion="4"
  modelPersistenceProviderPackage="H2PersistenceProviderPackage"
- revision="2"
- schemaVersion="1030"
- universal="">
+ revision="0"
+ schemaVersion="1040"
+ universal="password">
     <Mashups>
         <Mashup
          aspect.isFlex="true"
@@ -16,7 +16,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-12-09T09:43:51.948Z"
+         lastModifiedDate="2019-12-09T14:42:52.145+05:30"
          name="Demo"
          projectName="Worktree"
          rows="0.0"
@@ -565,6 +565,7 @@
             }
             ]]>
             </mashupContent>
+            <preview></preview>
         </Mashup>
     </Mashups>
 </Entities>
