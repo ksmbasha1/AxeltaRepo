@@ -13,7 +13,7 @@
          documentationContent=""
          homeMashup=""
          isDynamic="false"
-         lastModifiedDate="2019-12-09T15:45:39.568+05:30"
+         lastModifiedDate="2019-12-18T10:32:21.705+05:30"
          name="Padma"
          projectName="Worktree"
          tags="">
@@ -34,9 +34,6 @@
             <VocabularyTerm
              description=""
              name="padma1"></VocabularyTerm>
-            <VocabularyTerm
-             description=""
-             name="padma2"></VocabularyTerm>
         </ModelTagVocabulary>
     </ModelTags>
 </Entities>
