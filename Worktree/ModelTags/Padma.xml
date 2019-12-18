@@ -33,7 +33,7 @@
             <ConfigurationTables></ConfigurationTables>
             <VocabularyTerm
              description=""
-             name="padma1"></VocabularyTerm>
+             name="padma12"></VocabularyTerm>
         </ModelTagVocabulary>
     </ModelTags>
 </Entities>
